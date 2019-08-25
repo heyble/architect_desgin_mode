@@ -3,6 +3,11 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-parent</artifactId>
+        <version>2.1.6.RELEASE</version>
+    </parent>
 
     <groupId>com.demo</groupId>
     <artifactId>architect_desgin_mode</artifactId>
@@ -11,7 +16,27 @@
     <modules>
         <module>architect_strategy_mode</module>
         <module>architect_proxy_mode</module>
+        <module>demo_pattern_template</module>
+        <module>architect_delegate_mode</module>
+        <module>architect_adapter_mode</module>
+        <module>architect_decorator_mode</module>
+        <module>architect_observer_mode</module>
     </modules>
+
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.1.6.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
 
 
 </project>
